@@ -1,0 +1,945 @@
+/* =========================================
+   PORTFOLIO — Daniel Carreño
+   Módulo 6 — Alkemy 2025
+   
+   ÍNDICE:
+   1. Fuentes y estilos generales
+   2. Navegación
+   3. Hero
+   4. Banda de skills
+   5. Sobre mí
+   6. Servicios
+   7. Portafolio
+   8. Experiencia
+   9. Herramientas
+   10. Contacto
+   11. Footer
+   12. Responsive (mobile)
+========================================= */
+
+
+/* =========================================
+   1. FUENTES Y ESTILOS GENERALES
+========================================= */
+
+/* Esto hace que todos los elementos
+   cuenten el borde dentro del tamaño */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #0D0D0D;
+  color: #F2F2F2;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Todos los títulos usan Syne */
+h1, h2, h3 {
+  font-family: 'Syne', sans-serif;
+  color: #F2F2F2;
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+p {
+  color: #888888;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Label pequeño anaranjado sobre los títulos */
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #733B1A;
+  margin-bottom: 10px;
+}
+
+/* Texto outline — solo borde, sin relleno */
+.h1-outline {
+  font-family: 'Syne', sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #222222;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+/* Color naranja para acentos */
+.naranja {
+  color: #F24E29;
+}
+
+/* Texto de descripción */
+.descripcion {
+  color: #888888;
+  font-size: 17px;
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+
+/* Secciones: espacio superior e inferior */
+section {
+  padding: 100px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cabecera de sección con título a la izquierda
+   y descripción a la derecha */
+.seccion-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+  gap: 40px;
+}
+
+.descripcion-seccion {
+  max-width: 320px;
+  font-size: 15px;
+}
+
+
+/* =========================================
+   2. NAVEGACIÓN
+========================================= */
+
+header {
+  position: fixed;         /* Se queda fija arriba */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(13, 13, 13, 0.9);
+  border-bottom: 1px solid #1A1A1A;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+  height: 64px;
+}
+
+/* Logo DC. */
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #F2F2F2;
+}
+
+/* Lista del menú */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+nav ul a {
+  font-size: 13px;
+  color: #888888;
+}
+
+nav ul a:hover {
+  color: #F2F2F2;
+}
+
+/* Botón naranja en el menú */
+.btn-nav {
+  background-color: #F24E29;
+  color: #0D0D0D !important;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+
+/* =========================================
+   3. HERO
+========================================= */
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding-top: 160px;   /* Espacio para la nav fija */
+  padding-bottom: 100px;
+  padding-left: 80px;
+  padding-right: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* Columna de texto */
+.hero-texto {
+  flex: 1;
+}
+
+/* Botones del hero */
+.botones {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 50px;
+}
+
+/* Botón naranja relleno */
+.btn-primario {
+  background-color: #F24E29;
+  color: #0D0D0D;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 13px 26px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.btn-primario:hover {
+  background-color: #D94320;
+}
+
+/* Botón con solo borde */
+.btn-secundario {
+  border: 1px solid #333333;
+  color: #F2F2F2;
+  font-size: 15px;
+  padding: 13px 26px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.btn-secundario:hover {
+  border-color: #F24E29;
+  color: #F24E29;
+}
+
+/* Lista de especialidades */
+.especialidades {
+  display: flex;
+  gap: 30px;
+  padding-top: 28px;
+  border-top: 1px solid #1A1A1A;
+  flex-wrap: wrap;
+}
+
+.esp-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.esp-num {
+  font-size: 10px;
+  color: #444444;
+}
+
+.esp-txt {
+  font-size: 12px;
+  color: #888888;
+}
+
+/* Columna de imagen */
+.hero-imagen {
+  flex: 1;
+  position: relative;
+  max-width: 480px;
+}
+
+.hero-imagen img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid #222222;
+}
+
+/* Tarjeta de estadística que flota sobre la imagen */
+.stat-card {
+  position: absolute;
+  bottom: 24px;
+  right: -20px;
+  background-color: #161616;
+  border: 1px solid #222222;
+  border-radius: 10px;
+  padding: 16px 20px;
+  min-width: 170px;
+}
+
+.stat-card strong {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  color: #F24E29;
+  display: block;
+}
+
+.stat-card span {
+  font-size: 11px;
+  color: #888888;
+  display: block;
+  margin-top: 4px;
+}
+
+
+/* =========================================
+   4. BANDA DE SKILLS
+========================================= */
+
+/* La banda abarca todo el ancho de la pantalla */
+.banda {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid #1A1A1A;
+  border-bottom: 1px solid #1A1A1A;
+  padding: 14px 0;
+  display: flex;
+  gap: 40px;
+  white-space: nowrap;
+  animation: mover 25s linear infinite;
+}
+
+.banda span {
+  font-size: 12px;
+  color: #888888;
+  font-weight: 500;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+/* Animación de movimiento de la banda */
+@keyframes mover {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+
+/* =========================================
+   5. SOBRE MÍ
+========================================= */
+
+.sobre-mi {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.sobre-mi-texto {
+  flex: 1;
+}
+
+.parrafo {
+  color: #888888;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+/* Grid de 4 estadísticas en 2x2 */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.stat {
+  background-color: #161616;
+  border: 1px solid #1A1A1A;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.stat strong {
+  font-family: 'Syne', sans-serif;
+  font-size: 30px;
+  color: #F24E29;
+  display: block;
+}
+
+.stat span {
+  font-size: 11px;
+  color: #888888;
+  margin-top: 4px;
+  display: block;
+}
+
+.sobre-mi-imagen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sobre-mi-imagen img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #222222;
+}
+
+/* Fila de pills de herramientas */
+.herramientas-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.herramientas-pills span {
+  font-size: 11px;
+  color: #888888;
+  padding: 4px 10px;
+  border: 1px solid #222222;
+  border-radius: 4px;
+  background-color: #161616;
+}
+
+
+/* =========================================
+   6. SERVICIOS
+========================================= */
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.servicio-card {
+  background-color: #161616;
+  border: 1px solid #1A1A1A;
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.servicio-card:hover {
+  border-color: #733B1A;
+}
+
+.icono {
+  font-size: 24px;
+  width: 42px;
+  height: 42px;
+  background-color: rgba(242, 78, 41, 0.1);
+  border: 1px solid rgba(242, 78, 41, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.num-servicio {
+  font-size: 10px;
+  color: #444444;
+  font-weight: 500;
+}
+
+.servicio-card h3 {
+  font-size: 15px;
+}
+
+.servicio-card p {
+  font-size: 13px;
+  flex: 1;
+}
+
+/* Tags en el fondo de cada card */
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #1A1A1A;
+}
+
+.tags span {
+  font-size: 10px;
+  color: #888888;
+  padding: 3px 8px;
+  border: 1px solid #222222;
+  border-radius: 4px;
+}
+
+
+/* =========================================
+   7. PORTAFOLIO
+========================================= */
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.proyecto-card {
+  background-color: #161616;
+  border: 1px solid #1A1A1A;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.proyecto-card:hover {
+  border-color: #222222;
+}
+
+/* Contenedor de imagen con relación 16:9 */
+.proyecto-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #111111;
+  overflow: hidden;
+}
+
+.proyecto-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.proyecto-info {
+  padding: 16px 20px;
+}
+
+.categoria {
+  font-size: 10px;
+  font-weight: 600;
+  color: #F24E29;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.proyecto-info h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.proyecto-info p {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.proyecto-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #1A1A1A;
+}
+
+.proyecto-footer span {
+  font-size: 10px;
+  color: #444444;
+}
+
+.proyecto-footer a {
+  font-size: 12px;
+  font-weight: 600;
+  color: #F24E29;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(242, 78, 41, 0.3);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   8. EXPERIENCIA
+========================================= */
+
+.experiencia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 100px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.exp-col h2 {
+  margin-bottom: 40px;
+}
+
+/* Lista del timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 16px;
+}
+
+/* Punto naranja del timeline */
+.punto {
+  width: 8px;
+  height: 8px;
+  background-color: #F24E29;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.timeline-contenido time {
+  font-size: 11px;
+  color: #444444;
+  display: block;
+  margin-bottom: 6px;
+  font-style: normal;
+}
+
+.timeline-contenido h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.empresa {
+  font-size: 12px;
+  color: #733B1A;
+  margin-bottom: 6px;
+}
+
+/* Badge de logro */
+.logro {
+  display: inline-block;
+  font-size: 11px;
+  color: #888888;
+  background-color: rgba(242, 78, 41, 0.08);
+  border: 1px solid rgba(242, 78, 41, 0.2);
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+/* Título de educación */
+.edu-titulo {
+  margin-bottom: 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #1A1A1A;
+  font-size: 28px;
+}
+
+.edu-lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-item {
+  padding: 18px 14px;
+  border-bottom: 1px solid #1A1A1A;
+}
+
+.edu-item:hover {
+  background-color: #161616;
+}
+
+.edu-item time {
+  font-size: 10px;
+  color: #444444;
+  display: block;
+  margin-bottom: 6px;
+  font-style: normal;
+}
+
+.edu-item h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.edu-item p {
+  font-size: 12px;
+  color: #444444;
+}
+
+
+/* =========================================
+   9. HERRAMIENTAS
+========================================= */
+
+.herramientas {
+  text-align: left;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.tool-card {
+  background-color: #161616;
+  border: 1px solid #1A1A1A;
+  border-radius: 10px;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.tool-card:hover {
+  border-color: #222222;
+}
+
+.tool-card span {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.tool-card h3 {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.tool-card p {
+  font-size: 11px;
+  color: #444444;
+}
+
+
+/* =========================================
+   10. CONTACTO
+========================================= */
+
+.contacto {
+  text-align: center;
+}
+
+/* Título grande centrado */
+.titulo-contacto {
+  font-size: 64px;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.contacto .eyebrow {
+  display: block;
+  text-align: center;
+}
+
+.contacto .descripcion {
+  margin: 0 auto 36px;
+  font-size: 16px;
+  max-width: 460px;
+  text-align: center;
+}
+
+/* Botones de contacto centrados */
+.contacto-botones {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/* Datos de contacto */
+.datos-contacto {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-style: normal;
+  padding-top: 28px;
+  border-top: 1px solid #1A1A1A;
+}
+
+.datos-contacto span,
+.datos-contacto a {
+  font-size: 13px;
+  color: #888888;
+}
+
+.datos-contacto a:hover {
+  color: #F24E29;
+}
+
+
+/* =========================================
+   11. FOOTER
+========================================= */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 80px;
+  border-top: 1px solid #1A1A1A;
+}
+
+footer p {
+  font-size: 11px;
+  color: #444444;
+}
+
+
+/* =========================================
+   12. RESPONSIVE — pantallas pequeñas
+   Todo esto se aplica solo cuando el
+   navegador tiene menos de 768px de ancho
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* Reducir el padding lateral en móvil */
+  section {
+    padding: 60px 20px;
+  }
+
+  /* Nav: ocultar links, mostrar solo logo */
+  nav ul {
+    display: none;
+  }
+
+  nav {
+    padding: 0 20px;
+  }
+
+  /* H1 más pequeño en móvil */
+  h1 {
+    font-size: 40px;
+  }
+
+  .h1-outline {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  /* Hero: una columna en vez de dos */
+  .hero {
+    flex-direction: column;
+    padding: 120px 20px 60px;
+    min-height: auto;
+  }
+
+  .hero-imagen {
+    max-width: 100%;
+  }
+
+  /* Stat card: dejarla abajo en móvil */
+  .stat-card {
+    position: static;
+    margin-top: 16px;
+    right: auto;
+  }
+
+  /* Botones del hero: uno debajo del otro */
+  .botones {
+    flex-direction: column;
+  }
+
+  .btn-primario,
+  .btn-secundario {
+    text-align: center;
+  }
+
+  /* Especialidades: reducir espaciado */
+  .especialidades {
+    gap: 16px;
+  }
+
+  /* Sobre mí: una columna */
+  .sobre-mi {
+    flex-direction: column;
+  }
+
+  /* Servicios: 1 columna */
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Encabezados de sección: apilados */
+  .seccion-cabecera {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Proyectos: 1 columna */
+  .proyectos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Experiencia: 1 columna */
+  .experiencia {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 50px;
+  }
+
+  /* Herramientas: 2 columnas en móvil */
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contacto: botones uno debajo del otro */
+  .contacto-botones {
+    flex-direction: column;
+  }
+
+  .titulo-contacto {
+    font-size: 40px;
+  }
+
+  .datos-contacto {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Footer: apilado */
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+}
