@@ -260,6 +260,7 @@ nav ul a:hover {
   padding-top: 28px;
   border-top: 1px solid #1A1A1A;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .esp-item {
@@ -376,6 +377,7 @@ nav ul a:hover {
   grid-template-columns: 1fr 1fr;
   gap: 14px;
   margin-top: 40px;
+  list-style: none;
 }
 
 .stat {
@@ -417,9 +419,10 @@ nav ul a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  list-style: none;
 }
 
-.herramientas-pills span {
+.herramientas-pills li {
   font-size: 11px;
   color: #888888;
   padding: 4px 10px;
@@ -437,6 +440,11 @@ nav ul a:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  list-style: none;
+}
+
+.servicios-grid li {
+  list-style: none;
 }
 
 .servicio-card {
@@ -489,9 +497,10 @@ nav ul a:hover {
   margin-top: 12px;
   padding-top: 12px;
   border-top: 1px solid #1A1A1A;
+  list-style: none;
 }
 
-.tags span {
+.tags li {
   font-size: 10px;
   color: #888888;
   padding: 3px 8px;
@@ -508,6 +517,11 @@ nav ul a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  list-style: none;
+}
+
+.proyectos-grid li {
+  list-style: none;
 }
 
 .proyecto-card {
@@ -607,6 +621,7 @@ nav ul a:hover {
   display: flex;
   flex-direction: column;
   gap: 28px;
+  list-style: none;
 }
 
 .timeline-item {
@@ -666,6 +681,7 @@ nav ul a:hover {
 .edu-lista {
   display: flex;
   flex-direction: column;
+  list-style: none;
 }
 
 .edu-item {
@@ -709,6 +725,7 @@ nav ul a:hover {
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
   margin-top: 40px;
+  list-style: none;
 }
 
 .tool-card {
