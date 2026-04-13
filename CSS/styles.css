@@ -195,6 +195,23 @@ nav ul a:hover {
   font-size: 13px;
 }
 
+/* Menú hamburguesa */
+.menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #F2F2F2;
+  transition: color 0.3s ease;
+}
+
+.menu-btn:hover {
+  color: #F24E29;
+}
+
 
 /* =========================================
    3. HERO
@@ -945,13 +962,52 @@ footer p {
     padding: 60px 20px;
   }
 
-  /* Nav: ocultar links, mostrar solo logo */
-  nav ul {
-    display: none;
+  /* Nav: mostrar botón hamburguesa, ocultar menú por defecto */
+  .menu-btn {
+    display: block;
   }
 
   nav {
     padding: 0 20px;
+    position: relative;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(13, 13, 13, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #1A1A1A;
+  }
+
+  .menu-toggle:checked ~ ul {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  nav ul a {
+    display: block;
+    padding: 10px 0;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  nav ul a:hover {
+    background-color: rgba(242, 78, 41, 0.1);
   }
 
   /* Titulares más amigables en móvil */
