@@ -864,6 +864,80 @@ footer p {
   }
 }
 
+@media (max-width: 1024px) {
+  section {
+    padding: 80px 40px;
+  }
+
+  nav {
+    padding: 0 40px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .seccion-cabecera {
+    gap: 24px;
+  }
+
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .proyectos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .experiencia {
+    gap: 60px;
+  }
+
+  .hero {
+    gap: 40px;
+  }
+
+  .hero-texto,
+  .hero-imagen {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding-top: 140px;
+  }
+
+  .hero {
+    gap: 28px;
+  }
+
+  .botones {
+    flex-wrap: wrap;
+  }
+
+  .servicios-grid,
+  .proyectos-grid,
+  .tools-grid {
+    gap: 18px;
+  }
+
+  .descripcion,
+  .descripcion-seccion {
+    max-width: 100%;
+  }
+
+  .h1-outline {
+    letter-spacing: -1px;
+  }
+}
+
 @media (max-width: 768px) {
 
   /* Reducir el padding lateral en móvil */
@@ -880,17 +954,17 @@ footer p {
     padding: 0 20px;
   }
 
-  /* H1 más pequeño en móvil */
+  /* Titulares más amigables en móvil */
   h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .h1-outline {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   /* Hero: una columna en vez de dos */
@@ -918,17 +992,22 @@ footer p {
 
   .btn-primario,
   .btn-secundario {
+    width: 100%;
     text-align: center;
   }
 
   /* Especialidades: reducir espaciado */
   .especialidades {
-    gap: 16px;
+    gap: 14px;
   }
 
   /* Sobre mí: una columna */
   .sobre-mi {
     flex-direction: column;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
   }
 
   /* Servicios: 1 columna */
@@ -954,18 +1033,16 @@ footer p {
     gap: 50px;
   }
 
-  /* Herramientas: 2 columnas en móvil */
   .tools-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Contacto: botones uno debajo del otro */
   .contacto-botones {
     flex-direction: column;
   }
 
   .titulo-contacto {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .datos-contacto {
