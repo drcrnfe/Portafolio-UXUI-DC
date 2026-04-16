@@ -477,11 +477,34 @@ nav ul a:hover {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .servicio-card:hover {
-  border-color: #733B1A;
+  border-color: #F24E29;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(242, 78, 41, 0.15);
+}
+
+/* Imagen en tarjeta de servicio */
+.servicio-card .card-imagen {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background-color: #111111;
+}
+
+.servicio-card .card-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.servicio-card:hover .card-imagen img {
+  transform: scale(1.05);
 }
 
 .icono {
@@ -552,11 +575,44 @@ nav ul a:hover {
   border: 1px solid #1A1A1A;
   border-radius: 10px;
   overflow: hidden;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .proyecto-card:hover {
-  border-color: #222222;
+  border-color: #F24E29;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(242, 78, 41, 0.15);
+}
+
+.proyecto-card:hover .proyecto-img img {
+  transform: scale(1.05);
+}
+
+.proyecto-img img {
+  transition: transform 0.3s ease;
+}
+
+/* Imágenes del proceso en proyecto */
+.proceso-imagenes {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  background-color: #111111;
+  border-top: 1px solid #1A1A1A;
+}
+
+.proceso-imagenes img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #222222;
+  transition: all 0.3s ease;
+}
+
+.proceso-imagenes img:hover {
+  border-color: #F24E29;
+  transform: scale(1.05);
 }
 
 /* Contenedor de imagen con relación 16:9 */
@@ -1125,5 +1181,168 @@ footer p {
     gap: 10px;
     padding: 20px;
     text-align: center;
+  }
+}
+
+/* =========================================
+   13. POPUP CASE STUDY
+========================================= */
+
+/* Bot�n Ver activo */
+.btn-ver {
+  background: none;
+  border: 1px solid rgba(242, 78, 41, 0.3);
+  color: #F24E29;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-ver:hover {
+  background-color: #F24E29;
+  color: #0D0D0D;
+}
+
+/* Bot�n Ver deshabilitado */
+.btn-disabled {
+  font-size: 12px;
+  color: #444444;
+  padding: 4px 10px;
+}
+
+/* Overlay del popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+
+.popup-overlay.active {
+  display: flex;
+}
+
+/* Contenido del popup */
+.popup-content {
+  background-color: #161616;
+  border: 1px solid #222222;
+  border-radius: 16px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 40px;
+}
+
+/* Bot�n cerrar */
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #888888;
+  font-size: 32px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  line-height: 1;
+}
+
+.popup-close:hover {
+  color: #F24E29;
+}
+
+/* T�tulo del popup */
+.popup-content h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: #F2F2F2;
+}
+
+/* Imagen del popup */
+.popup-imagen {
+  width: 100%;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.popup-imagen img {
+  width: 100%;
+  height: auto;
+}
+
+/* Body del popup */
+.popup-body {
+  color: #888888;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.popup-body h3 {
+  font-size: 16px;
+  color: #F2F2F2;
+  margin: 24px 0 12px;
+  font-weight: 700;
+}
+
+.popup-body p {
+  margin-bottom: 12px;
+  color: #888888;
+}
+
+.popup-body ul {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.popup-body li {
+  margin-bottom: 8px;
+  color: #888888;
+}
+
+.case-study-tag {
+  font-size: 12px;
+  color: #F24E29 !important;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.popup-body .nota {
+  font-size: 13px;
+  color: #666666;
+  font-style: italic;
+  margin-top: 16px;
+}
+
+/* Responsive popup */
+@media (max-width: 768px) {
+  .popup-content {
+    padding: 24px;
+  }
+
+  .popup-content h2 {
+    font-size: 24px;
+  }
+
+  .popup-body h3 {
+    font-size: 14px;
+  }
+
+  .popup-body {
+    font-size: 14px;
   }
 }

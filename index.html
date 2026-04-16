@@ -194,36 +194,11 @@
 
         <li>
           <article class="servicio-card">
-            <div class="icono">🎨</div>
-            <span class="num-servicio">#01</span>
-            <h3>Diseño Gráfico &amp; Branding</h3>
-            <p>Identidad visual, logos y sistemas de marca que comunican con consistencia.</p>
-            <ul class="tags">
-              <li>Logo</li>
-              <li>Identidad</li>
-              <li>Social Media</li>
-            </ul>
-          </article>
-        </li>
-
-        <li>
-          <article class="servicio-card">
-            <div class="icono">🎬</div>
-            <span class="num-servicio">#02</span>
-            <h3>Edición de Video &amp; Reels</h3>
-            <p>Contenido audiovisual de alto impacto para redes y plataformas digitales.</p>
-            <ul class="tags">
-              <li>Reels</li>
-              <li>Spots TV</li>
-              <li>Motion</li>
-            </ul>
-          </article>
-        </li>
-
-        <li>
-          <article class="servicio-card">
+            <div class="card-imagen">
+              <img src="Assets/imagenes/servicio-uxui.png" alt="UX/UI Design">
+            </div>
             <div class="icono">📱</div>
-            <span class="num-servicio">#03</span>
+            <span class="num-servicio">#01</span>
             <h3>UX/UI Design</h3>
             <p>Interfaces digitales centradas en el usuario: wireframes y prototipos.</p>
             <ul class="tags">
@@ -236,6 +211,43 @@
 
         <li>
           <article class="servicio-card">
+            <div class="card-imagen">
+              <img src="Assets/imagenes/servicio-branding.png" alt="Diseño Gráfico y Branding">
+            </div>
+            <div class="icono">🎨</div>
+            <span class="num-servicio">#02</span>
+            <h3>Diseño Gráfico &amp; Branding</h3>
+            <p>Identidad visual, logos y sistemas de marca que comunican con consistencia.</p>
+            <ul class="tags">
+              <li>Logo</li>
+              <li>Identidad</li>
+              <li>Social Media</li>
+            </ul>
+          </article>
+        </li>
+
+        <li>
+          <article class="servicio-card">
+            <div class="card-imagen">
+              <img src="Assets/imagenes/servicio-video.png" alt="Edición de Video y Reels">
+            </div>
+            <div class="icono">🎬</div>
+            <span class="num-servicio">#03</span>
+            <h3>Edición de Video &amp; Reels</h3>
+            <p>Contenido audiovisual de alto impacto para redes y plataformas digitales.</p>
+            <ul class="tags">
+              <li>Reels</li>
+              <li>Spots TV</li>
+              <li>Motion</li>
+            </ul>
+          </article>
+        </li>
+
+        <li>
+          <article class="servicio-card">
+            <div class="card-imagen">
+              <img src="Assets/imagenes/servicio-ia.png" alt="IA y Automatización">
+            </div>
             <div class="icono">🤖</div>
             <span class="num-servicio">#04</span>
             <h3>IA &amp; Automatización</h3>
@@ -269,16 +281,16 @@
 
         <li>
           <article class="proyecto-card">
-            <div class="proyecto-img">
-              <img src="Assets/imagenes/Container.png" alt="Proyecto en curso UX">
+            <div class="proyecto-img proyecto-img-centrada">
+              <img src="Assets/imagenes/Avatar.png" alt="Portafolio UX UI">
             </div>
             <div class="proyecto-info">
               <p class="categoria">UX/UI Design</p>
-              <h3>Proyecto en curso</h3>
-              <p>Caso de estudio de diseño de interfaz en desarrollo.</p>
+              <h3>Caso de estudio</h3>
+              <p>Diseño de interfaz para portafolio UX/UI profesional.</p>
               <div class="proyecto-footer">
                 <span>2024 — 2025</span>
-                <a href="#">Ver →</a>
+                <button class="btn-ver" data-proyecto="portafolio-uxui">Ver →</button>
               </div>
             </div>
           </article>
@@ -295,7 +307,7 @@
               <p>Espacio para proyecto de branding o identidad visual.</p>
               <div class="proyecto-footer">
                 <span>2024</span>
-                <a href="#">Ver →</a>
+                <span class="btn-disabled">Ver →</span>
               </div>
             </div>
           </article>
@@ -312,7 +324,7 @@
               <p>Diseño de contenido gráfico y video para clientes.</p>
               <div class="proyecto-footer">
                 <span>2023 — Presente</span>
-                <a href="#">Ver →</a>
+                <span class="btn-disabled">Ver →</span>
               </div>
             </div>
           </article>
@@ -329,7 +341,7 @@
               <p>Coordinación audiovisual para spot publicitario.</p>
               <div class="proyecto-footer">
                 <span>2010 — 2015</span>
-                <a href="#">Ver →</a>
+                <span class="btn-disabled">Ver →</span>
               </div>
             </div>
           </article>
@@ -346,7 +358,7 @@
               <p>Compilación de trabajos audiovisuales y motion graphics.</p>
               <div class="proyecto-footer">
                 <span>2024</span>
-                <a href="#">Ver →</a>
+                <span class="btn-disabled">Ver →</span>
               </div>
             </div>
           </article>
@@ -363,7 +375,7 @@
               <p>Herramientas IA aplicadas a procesos de marketing digital.</p>
               <div class="proyecto-footer">
                 <span>2024</span>
-                <a href="#">Ver →</a>
+                <span class="btn-disabled">Ver →</span>
               </div>
             </div>
           </article>
@@ -542,6 +554,108 @@
     <p>© 2025 Daniel Carreño. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- Popup Case Study -->
+  <div id="popup-portafolio-uxui" class="popup-overlay">
+    <div class="popup-content">
+      <button class="popup-close">&times;</button>
+      <h2>Portafolio UX UI Designer</h2>
+      <div class="popup-imagen">
+        <img src="Assets/imagenes/Avatar.png" alt="Portafolio UX UI">
+      </div>
+      <div class="popup-body">
+        <p class="case-study-tag">CASE STUDY - Portafolio UX/UI (Producto Propio)</p>
+
+        <h3>Descripcion de la actividad</h3>
+        <p>Diseno y desarrollo de mi portafolio UX/UI como producto digital, orientado a comunicar claramente mi perfil
+          profesional, proyectos y habilidades, optimizando la experiencia de reclutadores en procesos de seleccion.</p>
+
+        <h3>Desafio principal</h3>
+        <p>El desafio fue disenar una experiencia que equilibrara atraccion visual, claridad de contenido y eficiencia
+          de navegacion, considerando que el usuario objetivo (reclutador) tiene poco tiempo y busca senales rapidas de
+          valor. Ademas, debia asegurar consistencia entre diseno y desarrollo, evitando fricciones en la
+          implementacion.</p>
+
+        <h3>Solucion propuesta</h3>
+        <p>Se abordo el proyecto como un producto UX completo:</p>
+        <ul>
+          <li>Definicion de estructura y contenido priorizado (portfolio-first thinking)</li>
+          <li>Diseno de flujos de navegacion simples y escaneables</li>
+          <li>Prototipado en alta fidelidad con foco en jerarquia visual</li>
+          <li>Implementacion front-end respetando decisiones de diseno</li>
+          <li>Integracion de componentes interactivos (como pop-ups de case study) para profundizar sin sobrecargar la
+            vista principal</li>
+        </ul>
+        <p>El resultado es un portafolio claro, navegable y alineado a estandares de la industria.</p>
+
+        <h3>Herramientas utilizadas</h3>
+        <p>Excalidraw - ideacion, arquitectura y user flows<br>
+          Figma - diseno UI, prototipado y sistema visual<br>
+          VS Code - desarrollo front-end (HTML, CSS, JavaScript)<br>
+          GitHub - control de versiones y despliegue del proyecto</p>
+
+        <h3>Principales aprendizajes</h3>
+        <ul>
+          <li>Disenar para reclutadores implica optimizar para escaneo, no lectura profunda</li>
+          <li>La consistencia entre diseno y codigo es clave para credibilidad profesional</li>
+          <li>La iteracion mejora tanto la experiencia como la narrativa del portafolio</li>
+          <li>Documentar decisiones fortalece el discurso profesional</li>
+        </ul>
+
+        <h3>Metricas de impacto</h3>
+        <ul>
+          <li>Reduccion de carga cognitiva mediante jerarquia visual clara</li>
+          <li>Mejora en la accesibilidad y navegacion (estructura simplificada)</li>
+          <li>Tiempo de acceso a proyectos clave (menos pasos en el flujo)</li>
+          <li>Claridad en la propuesta de valor (feedback cualitativo)</li>
+        </ul>
+        <p class="nota">(Correcto y creible: impacto UX + tecnico, aunque no tengas analytics)</p>
+
+        <h3>Habilidades tecnicas aplicadas</h3>
+        <p>UX/UI Design (estructura, wireframes, prototipado) - Arquitectura de informacion - Diseno de interaccion
+          (IxD) - Desarrollo front-end - Control de versiones con Git/GitHub - Pensamiento estrategico orientado a
+          usuario</p>
+
+        <h3>Justificacion del proyecto</h3>
+        <p>Elegi incluir mi portafolio como caso de estudio porque representa mi capacidad de disenar y construir un
+          producto digital completo, aplicando metodologias UX/UI, pensamiento estrategico y ejecucion tecnica, alineado
+          a contextos reales de empleabilidad en la industria digital.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const btnVer = document.querySelector('.btn-ver');
+      const popup = document.getElementById('popup-portafolio-uxui');
+      const closeBtn = document.querySelector('.popup-close');
+
+      if (btnVer && popup && closeBtn) {
+        btnVer.addEventListener('click', function () {
+          popup.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+
+        closeBtn.addEventListener('click', function () {
+          popup.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+
+        popup.addEventListener('click', function (e) {
+          if (e.target === popup) {
+            popup.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && popup.classList.contains('active')) {
+            popup.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
