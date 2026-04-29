@@ -64,7 +64,7 @@ h3 {
 }
 
 p {
-  color: #888888;
+  color: #C0C0C0; /* Gris más claro para mayor contraste en fondo oscuro */
 }
 
 a {
@@ -84,7 +84,7 @@ img {
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #733B1A;
+  color: #F24E29; /* Naranja vibrante para mejor visibilidad y contraste WCAG */
   margin-bottom: 10px;
 }
 
