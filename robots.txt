@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# ¡Hola reclutador! Gracias por revisar mi configuración técnica. 
+# Hola! Si estás leyendo esto, soy el diseñador UX que buscas.
